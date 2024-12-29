@@ -1,0 +1,23 @@
+@use '../../global' as *;
+
+.kanji_card {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /*width: 30vw;
+   height: 20vh;
+   background-color: $lightgrey-color-3;*/
+
+   .kanji {
+      //margin: 2rem auto;
+      margin-bottom: 3rem;
+      font-family: $japan-font;
+      font-size: 10rem;
+   }
+
+   .meaning {
+      position: absolute;
+      bottom: 1rem;
+   }
+}

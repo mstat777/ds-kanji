@@ -1,0 +1,14 @@
+# dependencies
+client/node_modules
+
+# production
+client/dist
+
+# Editor directories and files
+.vscode/*
+
+# misc
+client/.env.*
+client/public/
+client/src/vite-env.d.ts
+0-other
