@@ -1,0 +1,21 @@
+@use '../../global' as *;
+
+.infobar {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 30px;
+   width: 100%;
+   background-color: $main-color-4;
+
+   .info_item {
+      >span {
+         font-size: 1.4rem;
+
+         &:last-child {
+            margin-left: 4px;
+            font-weight: 600;
+         }
+      }
+   }
+}

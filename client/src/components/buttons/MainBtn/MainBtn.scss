@@ -1,0 +1,21 @@
+@use '../../../global' as *;
+
+.main_btn {
+   display: block;
+   margin: 0 auto;
+   padding: .8rem 1.2rem;
+   border: none;
+   border-radius: .6rem;
+   font-weight: 600;
+   color: $dark-color;
+   letter-spacing: .1rem;
+   text-transform: uppercase;
+   user-select: none;
+   background-color: $main-color-1;
+   transition: opacity .3s;
+
+   &:hover {
+      cursor: pointer;
+      opacity: .7;
+   }
+}

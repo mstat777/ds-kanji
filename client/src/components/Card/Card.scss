@@ -1,23 +1,18 @@
 @use '../../global' as *;
 
-.kanji_card {
+.card {
    position: relative;
    display: flex;
    align-items: center;
    justify-content: center;
-   /*width: 30vw;
-   height: 20vh;
-   background-color: $lightgrey-color-3;*/
+   border: none;
+   border-radius: 20px;
+   box-shadow: 2px 2px 2px $darkgrey-color-3;
+   background-color: $main-color-5;
 
-   .kanji {
-      //margin: 2rem auto;
+   .text {
       margin-bottom: 3rem;
       font-family: $japan-font;
       font-size: 10rem;
-   }
-
-   .meaning {
-      position: absolute;
-      bottom: 1rem;
    }
 }
