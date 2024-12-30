@@ -1,13 +1,11 @@
 import './Header.scss';
-import logo from '../../assets/img/logo.png';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import logo from '../../assets/img/logo.png';
 import BurgerBtn from '../buttons/BurgerBtn/Index';
-import { useAppDispatch } from '../../store/hooks';
-import { setShowSettings } from '../../store/slices/settings';
 
 // memo is in order to avoid rerendering
 export default function Header() {
-   const dispatch = useAppDispatch();
    const [showMenu, setShowMenu] = useState<boolean>(false);
 
    return (
@@ -25,18 +23,27 @@ export default function Header() {
             />
 
             {showMenu &&
-               <ul className={`menu ${showMenu ? 'show_menu' : null}`}>
+               <ul className={`menu ${showMenu ? 'show_menu' : ''}`}>
+
                   <li>
-                     <button
-                        onClick={() => {
-                           setShowMenu(false);
-                           dispatch(setShowSettings(true));
-                        }}
-                     >settings</button>
+                     <NavLink
+                        to={"/home"}
+                        onClick={() => setShowMenu(false)}
+                     >home</NavLink>
                   </li>
 
                   <li>
-                     <button>about</button>
+                     <NavLink
+                        to={"/settings"}
+                        onClick={() => setShowMenu(false)}
+                     >settings</NavLink>
+                  </li>
+
+                  <li>
+                     <NavLink
+                        to={"/about"}
+                        onClick={() => setShowMenu(false)}
+                     >about</NavLink>
                   </li>
                </ul>
             }

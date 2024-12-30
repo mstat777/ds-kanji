@@ -1,0 +1,55 @@
+@use '../../global' as *;
+
+.gameover {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: center / cover no-repeat url('img/girl-houses-small.jpg');
+
+   >div {
+      margin: 4rem;
+      padding: 2rem 2rem 3rem;
+      border-radius: 12px;
+      background-color: $light-color;
+
+      >p {
+         margin: .5rem 0;
+         font-size: 2rem;
+      }
+
+      .gameover_txt {
+         font-weight: 700;
+         color: $main-color-0;
+      }
+
+      .message {
+         white-space: pre-wrap;
+         //word-break: break-all;
+
+         >span {
+            font-weight: 600;
+         }
+      }
+
+      .link {
+         margin-top: 1rem;
+         //display: block;
+         padding: .8rem 1.2rem;
+         //border: none;
+         border-radius: .6rem;
+         font-weight: 600;
+         color: $light-color;
+         letter-spacing: .1rem;
+         text-transform: uppercase;
+         user-select: none;
+         background-color: $main-color-1;
+         transition: opacity .3s;
+
+         &:hover {
+            cursor: pointer;
+            opacity: .7;
+         }
+      }
+   }
+}

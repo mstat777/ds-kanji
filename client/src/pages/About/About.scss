@@ -1,0 +1,52 @@
+@use '../../global' as *;
+
+.about {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem 4rem;
+   background: linear-gradient(rgba(2, 173, 231, 0.5), rgba(2, 173, 231, 0.5)), url('img/wave-small.jpg');
+
+   h1 {
+      padding: 0 .8rem;
+      border-radius: 6px;
+      font-size: 4.6rem;
+      font-weight: 400;
+      color: $darkgrey-color-4;
+      text-shadow: 0 0 2px $main-color-0;
+      //text-shadow: 0 0 4px $main-color-2;
+      background-color: rgba(198, 232, 255, .8);
+      //-webkit-text-stroke: 2px $light-color;
+      //text-shadow: 0 0 2px $main-color-0;
+   }
+
+   .info {
+      margin-bottom: 10rem;
+      padding: 2rem 1rem;
+      border-radius: 6px;
+      text-align: left;
+      background-color: rgba(198, 232, 255, .8);
+
+      >div {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 1rem;
+
+         >span {
+            //font-weight: 800;
+            //color: $light-color;
+
+            &:first-child {
+               font-weight: 500;
+            }
+
+            &:last-child {
+               text-align: right;
+               color: $dark-color;
+               text-shadow: 0 0 1px $main-color-0;
+            }
+         }
+      }
+   }
+}

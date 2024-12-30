@@ -9,10 +9,19 @@
    border-radius: 20px;
    box-shadow: 2px 2px 2px $darkgrey-color-3;
    background-color: $main-color-5;
+   transition: all .4s;
 
    .text {
       margin-bottom: 3rem;
       font-family: $japan-font;
       font-size: 10rem;
    }
+}
+
+.correct {
+   background-color: $ok-color;
+}
+
+.wrong {
+   background-color: $nok-color;
 }

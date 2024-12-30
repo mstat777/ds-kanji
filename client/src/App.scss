@@ -25,6 +25,7 @@ body {
       flex-direction: column;
 
       main {
+         height: calc(100vh - $header-height - $footer-height);
          text-align: center;
       }
    }

@@ -2,13 +2,13 @@ import './InfoBar.scss';
 import { useAppSelector } from '../../store/hooks';
 
 export default function InfoBar() {
-   const { round, result, correct, wrong } = useAppSelector((state) => state.game);
+   const { round, score, correct, wrong } = useAppSelector((state) => state.game);
 
    return (
       <div className="infobar">
          <div className="info_item">
             <span>Round:</span>
-            <span>{round}/20</span>
+            <span>{round + 1}/20</span>
          </div>
 
          <div className="info_item">
@@ -22,8 +22,8 @@ export default function InfoBar() {
          </div>
 
          <div className="info_item">
-            <span>Result:</span>
-            <span>{result}%</span>
+            <span>Score:</span>
+            <span>{score}%</span>
          </div>
       </div>
    )

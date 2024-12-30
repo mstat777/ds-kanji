@@ -5,7 +5,7 @@
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
-   background-color: var(--lightshade-color-3);
+   //background-color: $lightgrey-color-3;
 
    .nav {
       display: flex;
@@ -35,10 +35,10 @@
          transform: translateX(-50%) translateX(60px);
          font-size: min(8vw, 3.6rem);
          letter-spacing: 2px;
-         -webkit-text-stroke: 1px var(--tertiary-color-3);
+         //-webkit-text-stroke: 1px $main-color-3;
          white-space: nowrap;
          user-select: none;
-         color: var(--tertiary-color-2);
+         color: $dark-color;
 
          @media screen and (min-width: $tablet) {
             font-size: 3.6rem;
@@ -58,12 +58,12 @@
          border-radius: 50%;
          border: none;
          font-size: 1.8rem;
-         color: var(--secondary-color);
-         background-color: var(--primary-color);
+         color: $dark-color;
+         background-color: $light-color;
          transition: color .3s;
 
          &:hover {
-            color: var(--tertiary-color-2);
+            color: $main-color-2;
          }
       }
 
@@ -76,7 +76,9 @@
          flex-direction: column;
          width: 100%;
          padding: .8rem 0 1rem;
-         background-color: var(--darkshade-color-1); // rgba(var(--darkshade-color-1), 0.9);
+         background: url('img/orange-blossom-small.jpg');
+         background-blend-mode: darken;
+         //background-color: $darkgrey-color-1;
          transition: transform 5s ease-out;
          z-index: 101;
 
@@ -86,7 +88,7 @@
          }
 
          >li {
-            >button {
+            >a {
                display: block;
                width: calc(50% - 2*.4rem);
                margin: .4rem auto;
@@ -97,12 +99,12 @@
                border-radius: .6rem;
                font-family: $title-font;
                font-size: 1.6rem;
-               font-weight: 500;
+               font-weight: 600;
                text-align: center;
                text-decoration: none;
                text-transform: uppercase;
-               color: var(--tertiary-color-2);
-               background-color: var(--primary-color);
+               color: $main-color-2;
+               background-color: $light-color;
                transition: all .4s;
 
                @media screen and (min-width: $tablet) {
@@ -110,8 +112,8 @@
                }
 
                &:hover {
-                  color: var(--primary-color);
-                  background-color: var(--tertiary-color-2);
+                  color: $light-color;
+                  background-color: $main-color-2;
                }
             }
          }

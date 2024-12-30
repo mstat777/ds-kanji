@@ -14,8 +14,8 @@ const rootReducer = (state: any, action: PayloadAction) => {
       const { settings } = state;
       state = { settings };
       //console.log(state);
-   } else if (action.type === 'RESET_GAME') {
-      //console.log("RESET_GAME called!");
+   } else if (action.type === 'RESET_ALL') {
+      //console.log("RESET_ALL called!");
       state = {};
    }
    return appReducer(state, action);

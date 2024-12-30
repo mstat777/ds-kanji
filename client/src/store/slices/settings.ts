@@ -5,7 +5,6 @@ type settingsType = {
    meaningToKanji: boolean;
    showInfoBar: boolean;
    showSettings: boolean;
-   showStatusPanel: boolean;
 }
 
 const initialState: settingsType = {
@@ -13,7 +12,6 @@ const initialState: settingsType = {
    meaningToKanji: false,
    showInfoBar: true,
    showSettings: false,
-   showStatusPanel: true,
 }
 
 export const settingsSlice = createSlice({
@@ -32,10 +30,6 @@ export const settingsSlice = createSlice({
       setShowSettings: (state, action) => {
          state.showSettings = action.payload;
       },
-      setShowStatusPanel: (state, action) => {
-         state.showStatusPanel = action.payload;
-      },
-
    }
 });
 
@@ -44,7 +38,6 @@ export const {
    setMeaningToKanji,
    setShowInfoBar,
    setShowSettings,
-   setShowStatusPanel,
 } = settingsSlice.actions;
 
 export default settingsSlice.reducer;

@@ -1,0 +1,23 @@
+@use '../../global' as *;
+
+.settings {
+   width: 90%;
+   max-width: 600px;
+   height: 100%;
+   margin: 0 auto;
+
+   >h2 {
+      margin-top: 0;
+      text-align: center;
+   }
+
+   &_ctn {
+      display: flex;
+      align-items: center;
+      padding: .5rem;
+
+      >button {
+         margin-left: 1rem;
+      }
+   }
+}
