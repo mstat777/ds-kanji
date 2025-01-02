@@ -9,7 +9,7 @@
    border-radius: 20px;
    box-shadow: 2px 2px 2px $darkgrey-color-3;
    background-color: $main-color-5;
-   transition: background-color 2.8s;
+   transition: background-color .5s;
 
    .text {
       margin-bottom: 3rem;
@@ -22,7 +22,7 @@
    box-sizing: border-box;
    -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
-   border: 6px solid $main-color-1;
+   border: 6px solid $main-color-3; // $main-color-1;
 }
 
 .wrong {
@@ -35,7 +35,7 @@
 
 .correct_blinking {
    //background-color: rgba(8, 210, 92, 1);
-   animation: .8s ease-in-out infinite blinking;
+   animation: .6s ease-in-out infinite blinking;
 }
 
 @keyframes blinking {

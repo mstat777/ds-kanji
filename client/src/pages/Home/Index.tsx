@@ -3,17 +3,19 @@ import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import { setKanjiToMeaning, setMeaningToKanji } from '../../store/slices/settings';
-import { setRound, setCorrect, setWrong, setQuestionNbs } from '../../store/slices/game';
-import db from '../../assets/resources/db.json';
+import { setDb, setLevel, setRound, setCorrect, setWrong, setQuestionNbs } from '../../store/slices/game';
+//import db from '../../assets/resources/db.json';
 import InfoBar from '../../components/InfoBar/Index';
 import Card from '../../components/Card/Index';
 import MainBtn from '../../components/buttons/MainBtn/Index';
 
 export default function Home() {
+   const navigate = useNavigate();
    const dispatch = useAppDispatch();
    const { kanjiToMeaning, meaningToKanji } = useAppSelector((state) => state.settings);
-   const { round, correct, wrong, totalRounds, questionNbs } = useAppSelector((state) => state.game);
-   const navigate = useNavigate();
+   const { db, level, round, correct, wrong, totalRounds, questionNbs } = useAppSelector((state) => state.game);
+
+   //const [db, setDb] = useState<any>([]);
 
    const [choices, setChoices] = useState<number[]>([]);
    const [selected, setSelected] = useState<number | undefined>(undefined);
@@ -22,8 +24,29 @@ export default function Home() {
    const timerRoundRef = useRef<number | null>(null);
    const timerShowAnswerRef = useRef<number | null>(null);
 
+   useEffect(() => {
+      console.log("lebel = ", level);
+      const importData = async (level: number) => {
+         let fileName = '';
+         switch (level) {
+            case 1: fileName = 'db_50'; break;
+            case 2: fileName = 'db_100'; break;
+            case 3: fileName = 'db_150'; break;
+         }
+
+         const data = await import(`../../assets/resources/${fileName}.json`);
+         dispatch(setDb(data.default));
+         console.log(db);
+      }
+
+      if (level && !db.length) {
+         importData(level);
+      }
+   }, [level]);
+
    // get random questions data
    useEffect(() => {
+      console.log("db.length = ", db.length);
       if (totalRounds && db.length) {
          //console.log(db.length);
          const numbers = [...Array(db.length).keys()];
@@ -74,7 +97,7 @@ export default function Home() {
             setAnswer("wrong");
             dispatch(setWrong(wrong + 1));
          }
-      }, 2000);
+      }, 400);
 
       // change round after some time
       timerRoundRef.current = setTimeout(() => {
@@ -86,7 +109,7 @@ export default function Home() {
 
          dispatch(setRound(round < totalRounds - 1 ? round + 1 : 0));
          console.log("round = ", round);
-      }, 8000);
+      }, 2200);
    }
 
    const handleCardClick = (choice: number) => {
@@ -112,11 +135,32 @@ export default function Home() {
             </section>
          }
 
-         {((kanjiToMeaning || meaningToKanji) &&
-            choices.length &&
-            round < totalRounds) &&
+         {((kanjiToMeaning || meaningToKanji)
+            && !level) &&
+            <section className="choose_mode">
+               <p className="level_txt">Choose a level:</p>
 
-            <section className="game_section">
+               <MainBtn
+                  text="Easy"
+                  onClick={() => dispatch(setLevel(1))}
+               />
+               <MainBtn
+                  text="Medium"
+                  onClick={() => dispatch(setLevel(2))}
+               />
+               <MainBtn
+                  text="Difficult"
+                  onClick={() => dispatch(setLevel(3))}
+               />
+            </section>
+         }
+
+         {((kanjiToMeaning || meaningToKanji)
+            && level
+            && choices.length
+            && round < totalRounds) &&
+
+            <section className="game_section" key={round}>
                <InfoBar />
 
                <section className="card_section">

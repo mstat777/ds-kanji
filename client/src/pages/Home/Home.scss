@@ -31,6 +31,15 @@
          background: none;
       }
 
+      .level_txt {
+         margin-top: -4rem;
+         padding: 8px 12px;
+         font-size: 3rem;
+         font-weight: 600;
+         color: $main-color-0;
+         background-color: $light-color;
+      }
+
       .main_btn {
          margin: 2rem auto;
          font-weight: 700;
@@ -89,10 +98,10 @@
 
 @keyframes fadein {
    from {
-      transform: scaleX(0);
+      opacity: 0;
    }
 
    to {
-      transform: scaleX(1);
+      opacity: 1;
    }
 }

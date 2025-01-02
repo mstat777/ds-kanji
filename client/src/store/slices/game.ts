@@ -1,7 +1,9 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit/react";
 
 type gameType = {
+   db: any[];
    isGameOver: boolean;
+   level: number;
    round: number;
    totalRounds: number;
    score: number;
@@ -11,7 +13,9 @@ type gameType = {
 }
 
 const initialState: gameType = {
+   db: [],
    isGameOver: false,
+   level: 0,
    round: 0,
    totalRounds: 20,
    score: 0,
@@ -24,8 +28,14 @@ export const gameSlice = createSlice({
    name: "game",
    initialState,
    reducers: {
+      setDb: (state, action: PayloadAction<any[]>) => {
+         state.db = [...action.payload];
+      },
       setIsGameOver: (state, action: PayloadAction<boolean>) => {
          state.isGameOver = action.payload;
+      },
+      setLevel: (state, action: PayloadAction<number>) => {
+         state.level = action.payload;
       },
       setRound: (state, action: PayloadAction<number>) => {
          state.round = action.payload;
@@ -49,7 +59,9 @@ export const gameSlice = createSlice({
 });
 
 export const {
+   setDb,
    setIsGameOver,
+   setLevel,
    setRound,
    setCorrect,
    setWrong,
