@@ -13,7 +13,7 @@ type gameType = {
 const initialState: gameType = {
    isGameOver: false,
    round: 0,
-   totalRounds: 10,
+   totalRounds: 20,
    score: 0,
    correct: 0,
    wrong: 0,
@@ -32,14 +32,14 @@ export const gameSlice = createSlice({
       },
       setCorrect: (state, action: PayloadAction<number>) => {
          state.correct = action.payload;
-         console.log(state.correct + 1);
-         console.log(state.round + 1);
+         //console.log(state.correct + 1);
+         //console.log(state.round + 1);
          state.score = Math.floor((state.correct / (state.round + 1)) * 100);
       },
       setWrong: (state, action: PayloadAction<number>) => {
          state.wrong = action.payload;
-         console.log(state.correct + 1);
-         console.log(state.round + 1);
+         //console.log(state.correct + 1);
+         //console.log(state.round + 1);
          state.score = Math.floor((state.correct / (state.round + 1)) * 100);
       },
       setQuestionNbs: (state, action: PayloadAction<number[]>) => {

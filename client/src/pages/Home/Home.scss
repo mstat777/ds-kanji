@@ -1,22 +1,22 @@
 @use '../../global.scss' as *;
 
-@keyframes fadein {
-   from {
-      transform: scaleX(0);
-   }
-
-   to {
-      transform: scaleX(1);
-   }
-}
-
 .home {
    position: relative;
+
+   @media screen and (min-width: $tablet) {
+      background: left / cover no-repeat url('/img/wave-big.jpg');
+   }
 
    >* {
       position: absolute;
       height: calc(100vh - $header-height - $footer-height);
       width: 100%;
+
+      @media screen and (min-width: $tablet) {
+         max-width: 600px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
    }
 
    .choose_mode {
@@ -25,7 +25,11 @@
       align-items: center;
       justify-content: center;
       height: 100%;
-      background: url('img/wave-small.jpg');
+      background: left / cover no-repeat url('/img/wave-small.jpg');
+
+      @media screen and (min-width: $tablet) {
+         background: none;
+      }
 
       .main_btn {
          margin: 2rem auto;
@@ -49,6 +53,10 @@
             font-weight: 600;
             font-size: 3.6rem;
             background-color: $lightaccent-color;
+
+            @media screen and (min-width: $tablet) {
+               height: 100px;
+            }
          }
 
          .choices_ctn {
@@ -69,8 +77,22 @@
             .card {
                width: 100%;
                height: 30vh;
+
+               @media screen and (min-width: $tablet) {
+                  //height: 100px;
+               }
             }
          }
       }
+   }
+}
+
+@keyframes fadein {
+   from {
+      transform: scaleX(0);
+   }
+
+   to {
+      transform: scaleX(1);
    }
 }

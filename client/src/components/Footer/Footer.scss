@@ -9,11 +9,11 @@
    margin-top: auto;
    font-size: 1.4rem;
    text-align: center;
-   background-color: var(--primary-color);
+   background-color: $light-color;
 
    p {
       display: block;
       font-size: 1.2rem;
-      color: var(--darkshade-color-1);
+      color: $darkgrey-color-1;
    }
 }

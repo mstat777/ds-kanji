@@ -1,5 +1,5 @@
 import './Home.scss';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import { setKanjiToMeaning, setMeaningToKanji } from '../../store/slices/settings';
@@ -18,6 +18,9 @@ export default function Home() {
    const [choices, setChoices] = useState<number[]>([]);
    const [selected, setSelected] = useState<number | undefined>(undefined);
    const [answer, setAnswer] = useState<string>('');
+
+   const timerRoundRef = useRef<number | null>(null);
+   const timerShowAnswerRef = useRef<number | null>(null);
 
    // get random questions data
    useEffect(() => {
@@ -53,39 +56,45 @@ export default function Home() {
 
    // check the answer
    const checkAnswer = (choice: number) => {
+      timerRoundRef.current &&
+         clearTimeout(timerRoundRef.current);
+      timerShowAnswerRef.current &&
+         clearTimeout(timerShowAnswerRef.current);
       //console.log(choices);
       //console.log("chosen = ", choice);
       //console.log("right answer = ", questionNbs[round]);
-      if (choice === questionNbs[round]) {
-         //console.log("RIGHT!");
-         setAnswer("correct");
-         dispatch(setCorrect(correct + 1));
-      } else {
-         //console.log("wrong!");
-         setAnswer("wrong");
-         dispatch(setWrong(wrong + 1));
-      }
 
-      const questionTimeout = setTimeout(() => {
-         dispatch(setRound(round < 9 ? round + 1 : 0));
-         console.log("round = ", round);
-         if (round === 1) {
-            navigate('/gameover');
+      timerShowAnswerRef.current = setTimeout(() => {
+         if (choice === questionNbs[round]) {
+            //console.log("RIGHT!");
+            setAnswer("correct");
+            dispatch(setCorrect(correct + 1));
+         } else {
+            //console.log("wrong!");
+            setAnswer("wrong");
+            dispatch(setWrong(wrong + 1));
          }
+      }, 2000);
+
+      // change round after some time
+      timerRoundRef.current = setTimeout(() => {
          if (round === totalRounds - 1) {
             navigate('/gameover');
             dispatch(setKanjiToMeaning(false));
             dispatch(setMeaningToKanji(false));
          }
-      }, 1000);
-      //return () => clearTimeout(questionTimeout);
+
+         dispatch(setRound(round < totalRounds - 1 ? round + 1 : 0));
+         console.log("round = ", round);
+      }, 8000);
    }
 
-   useEffect(() => {
-      if (choices.length) {
-         console.log(choices);
+   const handleCardClick = (choice: number) => {
+      if (!selected) {
+         checkAnswer(choice);
+         setSelected(choice);
       }
-   }, [choices.length]);
+   }
 
    return (
       <main className="home">
@@ -105,7 +114,7 @@ export default function Home() {
 
          {((kanjiToMeaning || meaningToKanji) &&
             choices.length &&
-            round < 10) &&
+            round < totalRounds) &&
 
             <section className="game_section">
                <InfoBar />
@@ -118,12 +127,13 @@ export default function Home() {
                   <div className="choices_ctn">
                      {choices.map((choice, i) =>
                         <Card
-                           className={selected === choice ? answer : ''}
+                           className={`
+                              ${(selected === choice && !answer) ? 'selected' : ''} 
+                              ${selected === choice ? answer : ''}
+                              ${answer === 'wrong' && choice === questionNbs[round] ? 'correct_blinking' : ''}
+                           `}
                            text={db[choice].JAP}
-                           onClick={() => {
-                              checkAnswer(choice);
-                              setSelected(choice);
-                           }}
+                           onClick={() => handleCardClick(choice)}
                            key={i}
                         />
                      )}

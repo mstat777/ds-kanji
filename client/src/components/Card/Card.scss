@@ -9,7 +9,7 @@
    border-radius: 20px;
    box-shadow: 2px 2px 2px $darkgrey-color-3;
    background-color: $main-color-5;
-   transition: all .4s;
+   transition: background-color 2.8s;
 
    .text {
       margin-bottom: 3rem;
@@ -18,10 +18,28 @@
    }
 }
 
-.correct {
-   background-color: $ok-color;
+.selected {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   border: 6px solid $main-color-1;
 }
 
 .wrong {
    background-color: $nok-color;
+}
+
+.correct {
+   background-color: $ok-color;
+}
+
+.correct_blinking {
+   //background-color: rgba(8, 210, 92, 1);
+   animation: .8s ease-in-out infinite blinking;
+}
+
+@keyframes blinking {
+   50% {
+      background-color: rgba(8, 210, 92, 1);
+   }
 }

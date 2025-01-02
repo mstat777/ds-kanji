@@ -5,7 +5,11 @@
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   background: center / cover no-repeat url('img/girl-houses-small.jpg');
+   background: center / cover no-repeat url('/img/girl-houses-small.jpg');
+
+   @media screen and (min-width: $tablet) {
+      background: linear-gradient(rgba(85, 20, 76, 0.4), rgba(85, 20, 76, 0.4)), center / cover no-repeat url('/img/girl-houses-small.jpg');
+   }
 
    >div {
       margin: 4rem;
@@ -25,7 +29,6 @@
 
       .message {
          white-space: pre-wrap;
-         //word-break: break-all;
 
          >span {
             font-weight: 600;
@@ -34,9 +37,7 @@
 
       .link {
          margin-top: 1rem;
-         //display: block;
          padding: .8rem 1.2rem;
-         //border: none;
          border-radius: .6rem;
          font-weight: 600;
          color: $light-color;
