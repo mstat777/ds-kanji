@@ -1,0 +1,84 @@
+{
+   "lang": {
+      "english": "english",
+      "french": "french",
+      "bulgarian": "bulgarian",
+      "vietnamese": "vietnamese"
+   },
+   "components": {
+      "header": {
+         "homeLink": "home",
+         "settingsLink": "settings",
+         "aboutLink": "about"
+      },
+      "footer": {
+         "rights": "\u00A9 2024 Dimitar Statev. All Rights Reserved."
+      },
+      "infoBar": {
+         "level": "Level:",
+         "round": "Round:",
+         "correct": "Correct:",
+         "wrong": "Wrong:",
+         "score": "Score:"
+      }
+   },
+   "pages": {
+      "home": {
+         "mode": {
+            "findMeaning": "Find The Meaning",
+            "findKanji": "Find The Kanji"
+         },
+         "level": {
+            "text": "Choose a level",
+            "1": "Very easy",
+            "2": "Easy",
+            "3": "Medium",
+            "4": "Hard"
+         }
+      },
+      "gameOver": {
+         "scoreTxt": "Your score is ",
+         "messages": {
+            "veryBad": "Not good. {{smiley}}\nBut you can try again.",
+            "bad": "Next time you will do better. {{smiley}}",
+            "notGood": "I'm sure that you can do better. {{smiley}}",
+            "soSo": "Not bad! {{smiley}}",
+            "good": "Good game! {{smiley}}",
+            "veryGood": "Bravo! A very good game! {{smiley}}",
+            "excellent": "CONGRATULATIONS!\nYou were excelent! {{smiley}}"
+         },
+         "playAnotherBtn": "Play another game"
+      },
+      "about": {
+         "title": "about",
+         "details": {
+            "nameTitle": "Game name:",
+            "name": "DS Kanji Game",
+            "descriptionTitle": "Description:",
+            "description": "Test your Japanese Kanji knowledge",
+            "creatorTitle": "Creator:",
+            "creator": "Dimitar Statev",
+            "versionTitle": "Version:",
+            "version": "0.2",
+            "dateTitle": "Last updated:",
+            "date": "January 2025"
+         }
+      },
+      "settings": {
+         "title": "Settings",
+         "showInfoBar": "Show Info bar"
+      },
+      "notFound": {
+         "title": "error 404: page not found",
+         "text": "This page is not available. Return to",
+         "link": "home"
+      }
+   },
+   "msg": {
+      "loadingTranslations": "loading translations...",
+      "mailForm": {
+         "thankYou": "Thank you for contacting us.\nYour message has been sent to our team.",
+         "notSend": "Error: Your message was not sent"
+      }
+   }
+}

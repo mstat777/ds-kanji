@@ -1,6 +1,7 @@
 @use '../../global' as *;
 
-.card {
+.letters,
+.kanji {
    position: relative;
    display: flex;
    align-items: center;
@@ -15,6 +16,15 @@
       margin-bottom: 3rem;
       font-family: $japan-font;
       font-size: 10rem;
+   }
+}
+
+.letters {
+   .text {
+      margin: 0;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 3.6rem;
    }
 }
 

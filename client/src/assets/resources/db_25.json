@@ -1,26 +1,5 @@
 [
     {
-        "EN": "above, up",
-        "JAP": "上",
-        "FR": "au-dessus, en haut",
-        "BG": "отгоре, нагоре",
-        "VI": "trên, lên"
-    },
-    {
-        "EN": "ball",
-        "JAP": "玉",
-        "FR": "balle",
-        "BG": "топка",
-        "VI": "bóng"
-    },
-    {
-        "EN": "below, down",
-        "JAP": "下",
-        "FR": "en bas",
-        "BG": "отдолу, надолу",
-        "VI": "dưới, xuống"
-    },
-    {
         "EN": "book",
         "JAP": "本",
         "FR": "livre",
@@ -33,20 +12,6 @@
         "FR": "enfant",
         "BG": "дете",
         "VI": "con"
-    },
-    {
-        "EN": "circle, yen",
-        "JAP": "円",
-        "FR": "cercle, yen",
-        "BG": "кръг, йена",
-        "VI": "hình tròn, yên"
-    },
-    {
-        "EN": "dog",
-        "JAP": "犬",
-        "FR": "chien",
-        "BG": "куче",
-        "VI": "chó"
     },
     {
         "EN": "earth, soil",
@@ -63,32 +28,11 @@
         "VI": "tám"
     },
     {
-        "EN": "enter",
-        "JAP": "入",
-        "FR": "entrer",
-        "BG": "влизам",
-        "VI": "vào"
-    },
-    {
-        "EN": "exit",
-        "JAP": "出",
-        "FR": "sortir",
-        "BG": "изход",
-        "VI": "ra"
-    },
-    {
         "EN": "eye",
         "JAP": "目",
         "FR": "œil",
         "BG": "око",
         "VI": "mắt"
-    },
-    {
-        "EN": "fire",
-        "JAP": "火",
-        "FR": "feu",
-        "BG": "огън",
-        "VI": "lửa"
     },
     {
         "EN": "five",
@@ -98,13 +42,6 @@
         "VI": "năm"
     },
     {
-        "EN": "foot",
-        "JAP": "足",
-        "FR": "pied",
-        "BG": "крак",
-        "VI": "chân"
-    },
-    {
         "EN": "four",
         "JAP": "四",
         "FR": "quatre",
@@ -112,46 +49,11 @@
         "VI": "bốn"
     },
     {
-        "EN": "gentleman, samurai",
-        "JAP": "士",
-        "FR": "gentleman, samouraï",
-        "BG": "джентълмен, самурай",
-        "VI": "quý ông, samurai"
-    },
-    {
-        "EN": "gold",
-        "JAP": "金",
-        "FR": "or",
-        "BG": "злато",
-        "VI": "vàng"
-    },
-    {
-        "EN": "hand",
-        "JAP": "手",
-        "FR": "main",
-        "BG": "ръка",
-        "VI": "bàn tay"
-    },
-    {
         "EN": "heart",
         "JAP": "心",
         "FR": "cœur",
         "BG": "сърце",
         "VI": "trái tim"
-    },
-    {
-        "EN": "heaven",
-        "JAP": "天",
-        "FR": "ciel",
-        "BG": "рай",
-        "VI": "trời"
-    },
-    {
-        "EN": "hundred",
-        "JAP": "百",
-        "FR": "cent",
-        "BG": "сто",
-        "VI": "trăm"
     },
     {
         "EN": "king",
@@ -168,25 +70,11 @@
         "VI": "lớn"
     },
     {
-        "EN": "life",
-        "JAP": "生",
-        "FR": "vie",
-        "BG": "живот",
-        "VI": "cuộc sống"
-    },
-    {
         "EN": "middle",
         "JAP": "中",
         "FR": "milieu",
         "BG": "среда",
         "VI": "giữa"
-    },
-    {
-        "EN": "month",
-        "JAP": "月",
-        "FR": "mois",
-        "BG": "месец",
-        "VI": "tháng"
     },
     {
         "EN": "mountain",
@@ -224,20 +112,6 @@
         "VI": "người"
     },
     {
-        "EN": "power",
-        "JAP": "力",
-        "FR": "pouvoir",
-        "BG": "сила",
-        "VI": "quyền lực"
-    },
-    {
-        "EN": "rice field",
-        "JAP": "田",
-        "FR": "rizière",
-        "BG": "оризище",
-        "VI": "ruộng lúa"
-    },
-    {
         "EN": "river",
         "JAP": "川",
         "FR": "rivière",
@@ -245,25 +119,11 @@
         "VI": "sông"
     },
     {
-        "EN": "see",
-        "JAP": "見",
-        "FR": "voir",
-        "BG": "виждам",
-        "VI": "xem"
-    },
-    {
         "EN": "seven",
         "JAP": "七",
         "FR": "sept",
         "BG": "седем",
         "VI": "bảy"
-    },
-    {
-        "EN": "shellfish",
-        "JAP": "貝",
-        "FR": "coquillages",
-        "BG": "мида, (мекотело с черупка)",
-        "VI": "sò"
     },
     {
         "EN": "six",
@@ -278,13 +138,6 @@
         "FR": "petit",
         "BG": "малък",
         "VI": "nhỏ"
-    },
-    {
-        "EN": "stone",
-        "JAP": "石",
-        "FR": "pierre",
-        "BG": "камък",
-        "VI": "đá"
     },
     {
         "EN": "sun, day",
@@ -320,27 +173,6 @@
         "FR": "deux",
         "BG": "две",
         "VI": "hai"
-    },
-    {
-        "EN": "water",
-        "JAP": "水",
-        "FR": "eau",
-        "BG": "вода",
-        "VI": "nước"
-    },
-    {
-        "EN": "what",
-        "JAP": "何",
-        "FR": "quoi",
-        "BG": "какво",
-        "VI": "cái gì"
-    },
-    {
-        "EN": "white",
-        "JAP": "白",
-        "FR": "blanc",
-        "BG": "бял",
-        "VI": "trắng"
     },
     {
         "EN": "woman",

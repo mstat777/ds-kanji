@@ -1,10 +1,11 @@
 @use '../../../global.scss' as *;
+
 $btn-height: 36px;
 
 .burger_btn {
    position: absolute;
    top: calc(($header-height - $btn-height) / 2);
-   right: calc(($header-height - $btn-height) / 2);
+   left: calc(($header-height - $btn-height) / 2 + 6px);
    display: flex;
    align-items: center;
    justify-content: center;

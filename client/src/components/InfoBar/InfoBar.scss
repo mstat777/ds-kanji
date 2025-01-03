@@ -2,19 +2,33 @@
 
 .infobar {
    display: flex;
-   justify-content: space-around;
-   align-items: center;
-   height: 30px;
+   flex-direction: column;
    width: 100%;
+   padding: 4px 20px;
    background-color: $main-color-4;
 
-   .info_item {
-      >span {
-         font-size: 1.4rem;
+   .info_row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 10px;
 
-         &:last-child {
-            margin-left: 4px;
-            font-weight: 600;
+      &+.info_row {
+         margin-top: 4px;
+      }
+
+      .info_item {
+         >span {
+            font-size: 1.4rem;
+
+            &:last-child {
+               margin-left: 4px;
+               padding: 1px 5px;
+               border-radius: 4px;
+               font-weight: 700;
+               color: $main-color-0;
+               background-color: $main-color-5;
+            }
          }
       }
    }

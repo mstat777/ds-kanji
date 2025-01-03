@@ -1,26 +1,30 @@
 import './GameOver.scss';
+import { useTranslation } from 'react-i18next';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { Link } from 'react-router-dom';
 
 export default function GameOver() {
+   const { t } = useTranslation();
+   const trPath = "pages.gameOver"; // translation path
+
    const { score } = useAppSelector((state) => state.game);
    let message = '';
    const dispatch = useAppDispatch();
 
    if (score < 20) {
-      message = "Not good. " + String.fromCodePoint(128549) + "\nBut you can try again.";
+      message = t(`${trPath}.messages.veryBad`, { smiley: String.fromCodePoint(128549) });
    } else if (score >= 20 && score < 35) {
-      message = "Next time you will do better. " + String.fromCodePoint(128539);
+      message = t(`${trPath}.messages.bad`, { smiley: String.fromCodePoint(128539) });
    } else if (score >= 35 && score < 50) {
-      message = "I'm sure that you can do better. " + String.fromCodePoint(128512);
+      message = t(`${trPath}.messages.notGood`, { smiley: String.fromCodePoint(128512) });
    } else if (score >= 50 && score < 60) {
-      message = "Not bad! " + String.fromCodePoint(128521);
+      message = t(`${trPath}.messages.soSo`, { smiley: String.fromCodePoint(128521) });
    } else if (score >= 60 && score < 80) {
-      message = "Good game! " + String.fromCodePoint(128522);
+      message = t(`${trPath}.messages.good`, { smiley: String.fromCodePoint(128522) });
    } else if (score >= 80 && score < 100) {
-      message = "Bravo! A very good game! " + String.fromCodePoint(128525);
+      message = t(`${trPath}.messages.veryGood`, { smiley: String.fromCodePoint(128525) });
    } else if (score === 100) {
-      message = "CONGRATULATIONS!\nYou were excelent! " + String.fromCodePoint(127942);
+      message = t(`${trPath}.messages.excellent`, { smiley: String.fromCodePoint(127942) });
    }
 
    return (
@@ -28,7 +32,7 @@ export default function GameOver() {
          <div>
             <p className="gameover_txt">ゲームオーバー</p>
 
-            <p className="message">Your score is <span>{score}</span>%.</p>
+            <p className="message">{t(`${trPath}.scoreTxt`)}<span>{score}</span>%.</p>
 
             <p className="message">{message}</p>
 
@@ -36,7 +40,7 @@ export default function GameOver() {
                onClick={() => dispatch({ type: "RESET_ALL" })}
                className="link"
             >
-               Play another game
+               {t(`${trPath}.playAnotherBtn`)}
             </Link>
          </div>
       </main>

@@ -1,0 +1,84 @@
+{
+   "lang": {
+      "english": "anglais",
+      "french": "français",
+      "bulgarian": "bulgare",
+      "vietnamese": "vietnamien"
+   },
+   "components": {
+      "header": {
+         "homeLink": "accueil",
+         "settingsLink": "réglages",
+         "aboutLink": "à propos"
+      },
+      "footer": {
+         "rights": "\u00A9 2024 Dimitar Statev. Tous droits réservés."
+      },
+      "infoBar": {
+         "level": "Niveau:",
+         "round": "Ronde :",
+         "correct": "Correct :",
+         "wrong": "Incorrects :",
+         "score": "Résultat :"
+      }
+   },
+   "pages": {
+      "home": {
+         "mode": {
+            "findMeaning": "Trouver la signification",
+            "findKanji": "Trouver le kanji"
+         },
+         "level": {
+            "text": "Choisissez le niveau",
+            "1": "Très facile",
+            "2": "Facile",
+            "3": "Moyen",
+            "4": "Difficile"
+         }
+      },
+      "gameOver": {
+         "scoreTxt": "Votre résultat est ",
+         "messages": {
+            "veryBad": "Pas bon. {{smiley}}\nVeuillez essayer encore une fois",
+            "bad": "La prochaine fois vous ferez mieux. {{smiley}}",
+            "notGood": "Je suis sûr que vous pouvez faire mieux. {{smiley}}",
+            "soSo": "Pas mal ! {{smiley}}",
+            "good": "Bien joué ! {{smiley}}",
+            "veryGood": "Bravo ! Très bien joué ! {{smiley}}",
+            "excellent": "FÉlICITATIONS !!!\nVous étiez formidable ! {{smiley}}"
+         },
+         "playAnotherBtn": "Jouer un autre jeu"
+      },
+      "about": {
+         "title": "à propos",
+         "details": {
+            "nameTitle": "Nom de jeu :",
+            "name": "DS Kanji Game",
+            "descriptionTitle": "Description :",
+            "description": "Tester votre connaissance des kanjis japonais",
+            "creatorTitle": "Créateur :",
+            "creator": "Dimitar Statev",
+            "versionTitle": "Version :",
+            "version": "0.2",
+            "dateTitle": "Dernière mise à jour :",
+            "date": "janvier 2025"
+         }
+      },
+      "settings": {
+         "title": "Réglages",
+         "showInfoBar": "Afficher la barre d'info"
+      },
+      "notFound": {
+         "title": "erreur 404 : page non trouvée",
+         "text": "Cette page n'est pas disponible. Retourner à",
+         "link": "l'acceuil"
+      }
+   },
+   "msg": {
+      "loadingTranslations": "chargement de traductions...",
+      "mailForm": {
+         "thankYou": "Merci de nous avoir contacté.\nVotre message a bien été transmis à notre équipe.",
+         "notSend": "Erreur : votre message n'a pas été envoyé"
+      }
+   }
+}

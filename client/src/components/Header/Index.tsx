@@ -1,26 +1,27 @@
 import './Header.scss';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../assets/img/logo.png';
+import { useTranslation } from 'react-i18next';
 import BurgerBtn from '../buttons/BurgerBtn/Index';
+import LangSelectorCtn from '../buttons/LangSelectorCtn/Index';
 
 // memo is in order to avoid rerendering
 export default function Header() {
+   const { t } = useTranslation();
+   const trPath = "components.header"; // translation path
    const [showMenu, setShowMenu] = useState<boolean>(false);
 
    return (
       <header className="header">
          <nav className="nav">
-            <div className="logo_ctn">
-               <img src={logo} alt="DS Kanji Game image" />
-            </div>
-
-            <h1 className="title">DS Kanji Game</h1>
-
             <BurgerBtn
                showMenu={showMenu}
                setShowMenu={setShowMenu}
             />
+
+            <h1 className="title">DS Kanji Game</h1>
+
+            <LangSelectorCtn />
 
             {showMenu &&
                <ul className={`menu ${showMenu ? 'show_menu' : ''}`}>
@@ -29,21 +30,21 @@ export default function Header() {
                      <NavLink
                         to={"/home"}
                         onClick={() => setShowMenu(false)}
-                     >home</NavLink>
+                     >{t(`${trPath}.homeLink`)}</NavLink>
                   </li>
 
                   <li>
                      <NavLink
                         to={"/settings"}
                         onClick={() => setShowMenu(false)}
-                     >settings</NavLink>
+                     >{t(`${trPath}.settingsLink`)}</NavLink>
                   </li>
 
                   <li>
                      <NavLink
                         to={"/about"}
                         onClick={() => setShowMenu(false)}
-                     >about</NavLink>
+                     >{t(`${trPath}.aboutLink`)}</NavLink>
                   </li>
                </ul>
             }

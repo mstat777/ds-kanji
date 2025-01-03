@@ -1,7 +1,10 @@
 import './About.scss';
+import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 
 export default function About() {
+   const { t } = useTranslation();
+   const trPath = "pages.about"; // translation path
 
    useEffect(() => {
       window.scrollTo(0, 0);
@@ -9,27 +12,32 @@ export default function About() {
 
    return (
       <main className="about">
-         <h1>about</h1>
+         <h1>{t(`${trPath}.title`)}</h1>
 
          <section className="info">
             <div>
-               <span>Game name: </span>
-               <span>DS Kanji Game</span>
+               <span>{t(`${trPath}.details.nameTitle`)}</span>
+               <span>{t(`${trPath}.details.name`)}</span>
             </div>
 
             <div>
-               <span>Description: </span>
-               <span>Test your Japanese Kanji knowledge</span>
+               <span>{t(`${trPath}.details.descriptionTitle`)}</span>
+               <span>{t(`${trPath}.details.description`)}</span>
             </div>
 
             <div>
-               <span>Creator: </span>
-               <span>Dimitar Statev</span>
+               <span>{t(`${trPath}.details.creatorTitle`)}</span>
+               <span>{t(`${trPath}.details.creator`)}</span>
             </div>
 
             <div>
-               <span>Created: </span>
-               <span>December 2024</span>
+               <span>{t(`${trPath}.details.versionTitle`)}</span>
+               <span>{t(`${trPath}.details.version`)}</span>
+            </div>
+
+            <div>
+               <span>{t(`${trPath}.details.dateTitle`)}</span>
+               <span>{t(`${trPath}.details.date`)}</span>
             </div>
          </section>
       </main>

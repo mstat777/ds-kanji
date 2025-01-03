@@ -1,0 +1,84 @@
+{
+   "lang": {
+      "english": "Tiếng Anh",
+      "french": "Tiếng Pháp",
+      "bulgarian": "Tiếng Bulgaria",
+      "vietnamese": "Tiếng Việt"
+   },
+   "components": {
+      "header": {
+         "homeLink": "Trang chủ",
+         "settingsLink": "Cài đặt",
+         "aboutLink": "Giới thiệu"
+      },
+      "footer": {
+         "rights": "\u00A9 2024 Dimitar Statev. Mọi quyền được bảo lưu."
+      },
+      "infoBar": {
+         "level": "Cấp độ:",
+         "round": "Vòng thứ:",
+         "correct": "Chính xác:",
+         "wrong": "Không đúng:",
+         "score": "Điểm:"
+      }
+   },
+   "pages": {
+      "home": {
+         "mode": {
+            "findMeaning": "Tìm ý nghĩa",
+            "findKanji": "Tìm chữ Kanji"
+         },
+         "level": {
+            "text": "Chọn một cấp độ",
+            "1": "Rất dễ",
+            "2": "Dễ",
+            "3": "Trung bình",
+            "4": "Cứng"
+         }
+      },
+      "gameOver": {
+         "scoreTxt": "Điểm của bạn là ",
+         "messages": {
+            "veryBad": "Không tốt. {{smiley}}\nNhưng bạn có thể thử lại.",
+            "bad": "Lần sau bạn sẽ làm tốt hơn. {{smiley}}",
+            "notGood": "Tôi chắc chắn rằng bạn có thể làm tốt hơn. {{smiley}}",
+            "soSo": "Không tệ! {{smiley}}",
+            "good": "Trò chơi hay! {{smiley}}",
+            "veryGood": "Tuyệt vời! Một trận đấu rất hay! {{smiley}}",
+            "excellent": "CHÚC MỪNG! Bạn thật tuyệt vời! {{smiley}}"
+         },
+         "playAnotherBtn": "Chơi một trò chơi khác"
+      },
+      "about": {
+         "title": "Giới thiệu",
+         "details": {
+            "nameTitle": "Tên trò chơi:",
+            "name": "DS Kanji Game",
+            "descriptionTitle": "Sự miêu tả:",
+            "description": "Kiểm tra kiến ​​thức Kanji tiếng Nhật của bạn",
+            "creatorTitle": "Người sáng tạo:",
+            "creator": "Dimitar Statev",
+            "versionTitle": "Phiên bản:",
+            "version": "0.2",
+            "dateTitle": "Cập nhật lần cuối:",
+            "date": "Tháng 1 năm 2025"
+         }
+      },
+      "settings": {
+         "title": "Cài đặt",
+         "showInfoBar": "Hiển thị thanh thông tin"
+      },
+      "notFound": {
+         "title": "lỗi 404: không tìm thấy trang",
+         "text": "Trang này không có sẵn. Quay lại",
+         "link": "trang chủ"
+      }
+   },
+   "msg": {
+      "loadingTranslations": "đang tải bản dịch...",
+      "mailForm": {
+         "thankYou": "Thank you for contacting us.\nYour message has been sent to our team.",
+         "notSend": "Error: Your message was not sent"
+      }
+   }
+}

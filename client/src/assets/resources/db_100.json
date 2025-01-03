@@ -1,102 +1,702 @@
 [
-   { "EN": "above, up", "JAP": "上" },
-   { "EN": "ball", "JAP": "玉" },
-   { "EN": "bamboo", "JAP": "竹" },
-   { "EN": "below, down", "JAP": "下" },
-   { "EN": "blue", "JAP": "青" },
-   { "EN": "body", "JAP": "体" },
-   { "EN": "book", "JAP": "本" },
-   { "EN": "bowl", "JAP": "丼" },
-   { "EN": "capital", "JAP": "京" },
-   { "EN": "car", "JAP": "車" },
-   { "EN": "child", "JAP": "子" },
-   { "EN": "circle, yen", "JAP": "円" },
-   { "EN": "correct", "JAP": "正" },
-   { "EN": "do", "JAP": "仕" },
-   { "EN": "dog", "JAP": "犬" },
-   { "EN": "ear", "JAP": "耳" },
-   { "EN": "early", "JAP": "早" },
-   { "EN": "earth, soil", "JAP": "土" },
-   { "EN": "eat, food", "JAP": "食" },
-   { "EN": "eight", "JAP": "八" },
-   { "EN": "enter", "JAP": "入" },
-   { "EN": "evening", "JAP": "夕" },
-   { "EN": "exit", "JAP": "出" },
-   { "EN": "eye", "JAP": "目" },
-   { "EN": "fire", "JAP": "火" }, 
-   { "EN": "five", "JAP": "五" }, 
-   { "EN": "flower", "JAP": "花" },
-   { "EN": "foot", "JAP": "足" },
-   { "EN": "forest", "JAP": "森" },
-   { "EN": "four", "JAP": "四" },
-   { "EN": "gentleman, samurai", "JAP": "士" },
-   { "EN": "gold", "JAP": "金" },
-   { "EN": "grass", "JAP": "草" },
-   { "EN": "hand", "JAP": "手" },
-   { "EN": "heart", "JAP": "心" },
-   { "EN": "heaven", "JAP": "天" },
-   { "EN": "hill", "JAP": "丘" },
-   { "EN": "hundred", "JAP": "百" },
-   { "EN": "insect", "JAP": "虫" },
-   { "EN": "king", "JAP": "王" },
-   { "EN": "large", "JAP": "大" },
-   { "EN": "left", "JAP": "左" },
-   { "EN": "letter", "JAP": "字" },
-   { "EN": "length", "JAP": "丈" },
-   { "EN": "life", "JAP": "生" },
-   { "EN": "lord, master", "JAP": "主" },
-   { "EN": "make", "JAP": "作" },
-   { "EN": "male", "JAP": "男" },
-   { "EN": "middle", "JAP": "中" },
-   { "EN": "month", "JAP": "月" },
-   { "EN": "mountain", "JAP": "山" },
-   { "EN": "mouth", "JAP": "口" },
-   { "EN": "name", "JAP": "名" },
-   { "EN": "nine", "JAP": "九" },
-   { "EN": "now", "JAP": "今" }, 
-   { "EN": "one", "JAP": "一" },
-   { "EN": "person", "JAP": "人" }, 
-   { "EN": "power", "JAP": "力" }, 
-   { "EN": "previous", "JAP": "先" }, 
-   { "EN": "rain", "JAP": "雨" }, 
-   { "EN": "rank", "JAP": "位" }, 
-   { "EN": "receive", "JAP": "享" }, 
-   { "EN": "red", "JAP": "赤" },
-   { "EN": "relationship", "JAP": "仲" }, 
-   { "EN": "rest", "JAP": "休" }, 
-   { "EN": "rice field", "JAP": "田" },
-   { "EN": "right", "JAP": "右" }, 
-   { "EN": "river", "JAP": "川" }, 
-   { "EN": "round, circle", "JAP": "丸" }, 
-   { "EN": "school", "JAP": "校" }, 
-   { "EN": "see", "JAP": "見" },
-   { "EN": "seven", "JAP": "七" }, 
-   { "EN": "shellfish", "JAP": "貝" }, 
-   { "EN": "six", "JAP": "六" }, 
-   { "EN": "sky", "JAP": "空" }, 
-   { "EN": "small", "JAP": "小" }, 
-   { "EN": "sound", "JAP": "音" }, 
-   { "EN": "stand up", "JAP": "立" }, 
-   { "EN": "stomach", "JAP": "六" }, 
-   { "EN": "stone", "JAP": "石" }, 
-   { "EN": "study", "JAP": "学" }, 
-   { "EN": "street", "JAP": "丁" }, 
-   { "EN": "sun, day", "JAP": "日" }, 
-   { "EN": "ten", "JAP": "十" }, 
-   { "EN": "ten thousand", "JAP": "万" },
-   { "EN": "thousand", "JAP": "千" },
-   { "EN": "thread", "JAP": "糸" },
-   { "EN": "three", "JAP": "三" },
-   { "EN": "town", "JAP": "町" },
-   { "EN": "tree", "JAP": "木" },
-   { "EN": "two", "JAP": "二" },
-   { "EN": "use", "JAP": "使" },
-   { "EN": "village", "JAP": "村" },
-   { "EN": "water", "JAP": "水" },
-   { "EN": "what", "JAP": "何" },
-   { "EN": "white", "JAP": "白" },
-   { "EN": "woman", "JAP": "女" },
-   { "EN": "world", "JAP": "世" },
-   { "EN": "writing", "JAP": "文" },
-   { "EN": "year", "JAP": "年" }
+    {
+        "EN": "above, up",
+        "JAP": "上",
+        "FR": "au-dessus, en haut",
+        "BG": "отгоре, нагоре",
+        "VI": "trên, lên"
+    },
+    {
+        "EN": "ball",
+        "JAP": "玉",
+        "FR": "balle",
+        "BG": "топка",
+        "VI": "bóng"
+    },
+    {
+        "EN": "bamboo",
+        "JAP": "竹",
+        "FR": "bmbou",
+        "BG": "бамбук",
+        "VI": "tre"
+    },
+    {
+        "EN": "below, down",
+        "JAP": "下",
+        "FR": "en bas",
+        "BG": "отдолу, надолу",
+        "VI": "bên dưới, xuống"
+    },
+    {
+        "EN": "blue",
+        "JAP": "青",
+        "FR": "bleu",
+        "BG": "син, синьо",
+        "VI": "màu xanh"
+    },
+    {
+        "EN": "body",
+        "JAP": "体",
+        "FR": "corps",
+        "BG": "тяло",
+        "VI": "thân"
+    },
+    {
+        "EN": "book",
+        "JAP": "本",
+        "FR": "livre",
+        "BG": "книга",
+        "VI": "sách"
+    },
+    {
+        "EN": "bowl",
+        "JAP": "丼",
+        "FR": "bol",
+        "BG": "купа, паница",
+        "VI": "bát"
+    },
+    {
+        "EN": "capital",
+        "JAP": "京",
+        "FR": "capitale",
+        "BG": "столица",
+        "VI": "thủ đô"
+    },
+    {
+        "EN": "car",
+        "JAP": "車",
+        "FR": "voiture",
+        "BG": "кола",
+        "VI": "xe"
+    },
+    {
+        "EN": "child",
+        "JAP": "子",
+        "FR": "enfant",
+        "BG": "дете",
+        "VI": "con"
+    },
+    {
+        "EN": "circle, yen",
+        "JAP": "円",
+        "FR": "cercle, yen",
+        "BG": "кръг, йена",
+        "VI": "hình tròn, yên"
+    },
+    {
+        "EN": "correct",
+        "JAP": "正",
+        "FR": "correct",
+        "BG": "правилен",
+        "VI": "đúng"
+    },
+    {
+        "EN": "do",
+        "JAP": "仕",
+        "FR": "faire",
+        "BG": "правя",
+        "VI": "làm"
+    },
+    {
+        "EN": "dog",
+        "JAP": "犬",
+        "FR": "chien",
+        "BG": "куче",
+        "VI": "con chó"
+    },
+    {
+        "EN": "ear",
+        "JAP": "耳",
+        "FR": "oreille",
+        "BG": "ухо",
+        "VI": "tai"
+    },
+    {
+        "EN": "early",
+        "JAP": "早",
+        "FR": "tôt",
+        "BG": "рано",
+        "VI": "sớm"
+    },
+    {
+        "EN": "earth, soil",
+        "JAP": "土",
+        "FR": "terre, sol",
+        "BG": "земя, почва",
+        "VI": "đất, đất"
+    },
+    {
+        "EN": "eat, food",
+        "JAP": "食",
+        "FR": "manger, nourriture",
+        "BG": "храна",
+        "VI": "ăn, thức ăn"
+    },
+    {
+        "EN": "eight",
+        "JAP": "八",
+        "FR": "huit",
+        "BG": "осем",
+        "VI": "tám"
+    },
+    {
+        "EN": "enter",
+        "JAP": "入",
+        "FR": "entrer",
+        "BG": "влизам",
+        "VI": "vào"
+    },
+    {
+        "EN": "evening",
+        "JAP": "夕",
+        "FR": "soir",
+        "BG": "вечер",
+        "VI": "buổi tối"
+    },
+    {
+        "EN": "exit",
+        "JAP": "出",
+        "FR": "sortir",
+        "BG": "изход",
+        "VI": "ra"
+    },
+    {
+        "EN": "eye",
+        "JAP": "目",
+        "FR": "œil",
+        "BG": "око",
+        "VI": "mắt"
+    },
+    {
+        "EN": "fire",
+        "JAP": "火",
+        "FR": "feu",
+        "BG": "огън",
+        "VI": "lửa"
+    },
+    {
+        "EN": "five",
+        "JAP": "五",
+        "FR": "cinq",
+        "BG": "пет",
+        "VI": "năm"
+    },
+    {
+        "EN": "flower",
+        "JAP": "花",
+        "FR": "fleur",
+        "BG": "цвете",
+        "VI": "hoa"
+    },
+    {
+        "EN": "foot",
+        "JAP": "足",
+        "FR": "pied",
+        "BG": "крак",
+        "VI": "chân"
+    },
+    {
+        "EN": "forest",
+        "JAP": "森",
+        "FR": "forêt",
+        "BG": "гора",
+        "VI": "rừng"
+    },
+    {
+        "EN": "four",
+        "JAP": "四",
+        "FR": "quatre",
+        "BG": "четири",
+        "VI": "bốn"
+    },
+    {
+        "EN": "gentleman, samurai",
+        "JAP": "士",
+        "FR": "gentleman, samouraï",
+        "BG": "джентълмен, самурай",
+        "VI": "quý ông, samurai"
+    },
+    {
+        "EN": "gold",
+        "JAP": "金",
+        "FR": "or",
+        "BG": "злато",
+        "VI": "vàng"
+    },
+    {
+        "EN": "grass",
+        "JAP": "草",
+        "FR": "herbe",
+        "BG": "трева",
+        "VI": "cỏ"
+    },
+    {
+        "EN": "hand",
+        "JAP": "手",
+        "FR": "main",
+        "BG": "ръка",
+        "VI": "bàn tay"
+    },
+    {
+        "EN": "heart",
+        "JAP": "心",
+        "FR": "cœur",
+        "BG": "сърце",
+        "VI": "trái tim"
+    },
+    {
+        "EN": "heaven",
+        "JAP": "天",
+        "FR": "ciel",
+        "BG": "рай",
+        "VI": "trời"
+    },
+    {
+        "EN": "hill",
+        "JAP": "丘",
+        "FR": "colline",
+        "BG": "хълм",
+        "VI": "đồi"
+    },
+    {
+        "EN": "hundred",
+        "JAP": "百",
+        "FR": "cent",
+        "BG": "сто",
+        "VI": "trăm"
+    },
+    {
+        "EN": "insect",
+        "JAP": "虫",
+        "FR": "insecte",
+        "BG": "насекомо",
+        "VI": "côn trùng"
+    },
+    {
+        "EN": "king",
+        "JAP": "王",
+        "FR": "roi",
+        "BG": "крал",
+        "VI": "vua"
+    },
+    {
+        "EN": "large",
+        "JAP": "大",
+        "FR": "grand",
+        "BG": "голям",
+        "VI": "lớn"
+    },
+    {
+        "EN": "left",
+        "JAP": "左",
+        "FR": "gauche",
+        "BG": "ляв, ляво",
+        "VI": "trái"
+    },
+    {
+        "EN": "length",
+        "JAP": "丈",
+        "FR": "longueur",
+        "BG": "дължина",
+        "VI": "chiều dài"
+    },
+    {
+        "EN": "letter",
+        "JAP": "字",
+        "FR": "lettre",
+        "BG": "писмо",
+        "VI": "chữ cái"
+    },
+    {
+        "EN": "life",
+        "JAP": "生",
+        "FR": "vie",
+        "BG": "живот",
+        "VI": "cuộc sống"
+    },
+    {
+        "EN": "lord, master",
+        "JAP": "主",
+        "FR": "maître",
+        "BG": "господар, владетел",
+        "VI": "chúa tể, chủ nhân"
+    },
+    {
+        "EN": "make",
+        "JAP": "作",
+        "FR": "faire",
+        "BG": "правя, изработвам",
+        "VI": "làm"
+    },
+    {
+        "EN": "male",
+        "JAP": "男",
+        "FR": "mâle",
+        "BG": "мъжки",
+        "VI": "nam"
+    },
+    {
+        "EN": "middle",
+        "JAP": "中",
+        "FR": "milieu",
+        "BG": "среда",
+        "VI": "giữa"
+    },
+    {
+        "EN": "month",
+        "JAP": "月",
+        "FR": "mois",
+        "BG": "месец",
+        "VI": "tháng"
+    },
+    {
+        "EN": "mountain",
+        "JAP": "山",
+        "FR": "montagne",
+        "BG": "планина",
+        "VI": "núi"
+    },
+    {
+        "EN": "mouth",
+        "JAP": "口",
+        "FR": "bouche",
+        "BG": "уста",
+        "VI": "miệng"
+    },
+    {
+        "EN": "name",
+        "JAP": "名",
+        "FR": "nom",
+        "BG": "име",
+        "VI": "tên"
+    },
+    {
+        "EN": "nine",
+        "JAP": "九",
+        "FR": "neuf",
+        "BG": "девет",
+        "VI": "chín"
+    },
+    {
+        "EN": "now",
+        "JAP": "今",
+        "FR": "maintenant",
+        "BG": "сега",
+        "VI": "bây giờ"
+    },
+    {
+        "EN": "one",
+        "JAP": "一",
+        "FR": "un",
+        "BG": "един",
+        "VI": "một"
+    },
+    {
+        "EN": "person",
+        "JAP": "人",
+        "FR": "personne",
+        "BG": "човек",
+        "VI": "người"
+    },
+    {
+        "EN": "power",
+        "JAP": "力",
+        "FR": "pouvoir",
+        "BG": "сила",
+        "VI": "quyền lực"
+    },
+    {
+        "EN": "previous",
+        "JAP": "先",
+        "FR": "précédent",
+        "BG": "предишен, преден",
+        "VI": "trước"
+    },
+    {
+        "EN": "rain",
+        "JAP": "雨",
+        "FR": "pluie",
+        "BG": "дъжд",
+        "VI": "mưa"
+    },
+    {
+        "EN": "rank",
+        "JAP": "位",
+        "FR": "rang",
+        "BG": "ранг, чин",
+        "VI": "xếp hạng"
+    },
+    {
+        "EN": "receive",
+        "JAP": "享",
+        "FR": "recevoir",
+        "BG": "получавам",
+        "VI": "nhận"
+    },
+    {
+        "EN": "red",
+        "JAP": "赤",
+        "FR": "rouge",
+        "BG": "червен",
+        "VI": "đỏ"
+    },
+    {
+        "EN": "relationship",
+        "JAP": "仲",
+        "FR": "relation",
+        "BG": "родство, роднинство",
+        "VI": "mối quan hệ"
+    },
+    {
+        "EN": "rest",
+        "JAP": "休",
+        "FR": "repos, reposer",
+        "BG": "почивка, отдих",
+        "VI": "nghỉ ngơi"
+    },
+    {
+        "EN": "rice field",
+        "JAP": "田",
+        "FR": "rizière",
+        "BG": "оризище",
+        "VI": "ruộng lúa"
+    },
+    {
+        "EN": "right",
+        "JAP": "右",
+        "FR": "droite",
+        "BG": "десен",
+        "VI": "phải"
+    },
+    {
+        "EN": "river",
+        "JAP": "川",
+        "FR": "rivière",
+        "BG": "река",
+        "VI": "sông"
+    },
+    {
+        "EN": "round, circle",
+        "JAP": "丸",
+        "FR": "rond, cercle",
+        "BG": "кръг, окръжност",
+        "VI": "tròn, vòng tròn"
+    },
+    {
+        "EN": "school",
+        "JAP": "校",
+        "FR": "école",
+        "BG": "училище",
+        "VI": "trường học"
+    },
+    {
+        "EN": "see",
+        "JAP": "見",
+        "FR": "voir",
+        "BG": "виждам",
+        "VI": "xem"
+    },
+    {
+        "EN": "seven",
+        "JAP": "七",
+        "FR": "sept",
+        "BG": "седем",
+        "VI": "bảy"
+    },
+    {
+        "EN": "shellfish",
+        "JAP": "貝",
+        "FR": "coquillages",
+        "BG": "мида, (мекотело с черупка)",
+        "VI": "sò"
+    },
+    {
+        "EN": "six",
+        "JAP": "六",
+        "FR": "six",
+        "BG": "шест",
+        "VI": "sáu"
+    },
+    {
+        "EN": "sky",
+        "JAP": "空",
+        "FR": "ciel",
+        "BG": "небе",
+        "VI": ""
+    },
+    {
+        "EN": "small",
+        "JAP": "小",
+        "FR": "petit",
+        "BG": "малък",
+        "VI": "nhỏ"
+    },
+    {
+        "EN": "sound",
+        "JAP": "音",
+        "FR": "son",
+        "BG": "звук",
+        "VI": "âm thanh"
+    },
+    {
+        "EN": "stand up",
+        "JAP": "立",
+        "FR": "se lever",
+        "BG": "ставам, изправям се",
+        "VI": "đứng lên"
+    },
+    {
+        "EN": "stomach",
+        "JAP": "六",
+        "FR": "estomac",
+        "BG": "стомах",
+        "VI": "dạ dày"
+    },
+    {
+        "EN": "stone",
+        "JAP": "石",
+        "FR": "pierre",
+        "BG": "камък",
+        "VI": "đá"
+    },
+    {
+        "EN": "street",
+        "JAP": "丁",
+        "FR": "rue",
+        "BG": "улица",
+        "VI": "đường phố"
+    },
+    {
+        "EN": "study",
+        "JAP": "学",
+        "FR": "étudier",
+        "BG": "уча",
+        "VI": "học tập"
+    },
+    {
+        "EN": "sun, day",
+        "JAP": "日",
+        "FR": "soleil, jour",
+        "BG": "слънце, ден",
+        "VI": "mặt trời, ngày"
+    },
+    {
+        "EN": "ten",
+        "JAP": "十",
+        "FR": "dix",
+        "BG": "десет",
+        "VI": "mười"
+    },
+    {
+        "EN": "ten thousand, 10000",
+        "JAP": "万",
+        "FR": "dix mille",
+        "BG": "десет хиляди, 10000",
+        "VI": "mười ngàn, 10000"
+    },
+    {
+        "EN": "thousand, 1000",
+        "JAP": "千",
+        "FR": "mille",
+        "BG": "хиляда, 1000",
+        "VI": "nghìn, 1000"
+    },
+    {
+        "EN": "thread",
+        "JAP": "糸",
+        "FR": "fil",
+        "BG": "конец, нишка",
+        "VI": "sợi"
+    },
+    {
+        "EN": "three",
+        "JAP": "三",
+        "FR": "trois",
+        "BG": "три",
+        "VI": "ba"
+    },
+    {
+        "EN": "town",
+        "JAP": "町",
+        "FR": "ville",
+        "BG": "град",
+        "VI": "thị trấn"
+    },
+    {
+        "EN": "tree",
+        "JAP": "木",
+        "FR": "arbre",
+        "BG": "дърво",
+        "VI": "cây"
+    },
+    {
+        "EN": "two",
+        "JAP": "二",
+        "FR": "deux",
+        "BG": "две",
+        "VI": "hai"
+    },
+    {
+        "EN": "use",
+        "JAP": "使",
+        "FR": "utiliser",
+        "BG": "ползвам, използвам",
+        "VI": "sử dụng"
+    },
+    {
+        "EN": "village",
+        "JAP": "村",
+        "FR": "village",
+        "BG": "село",
+        "VI": "làng"
+    },
+    {
+        "EN": "water",
+        "JAP": "水",
+        "FR": "eau",
+        "BG": "вода",
+        "VI": "nước"
+    },
+    {
+        "EN": "what",
+        "JAP": "何",
+        "FR": "quoi",
+        "BG": "какво",
+        "VI": "cái gì"
+    },
+    {
+        "EN": "white",
+        "JAP": "白",
+        "FR": "blanc",
+        "BG": "бял",
+        "VI": "trắng"
+    },
+    {
+        "EN": "woman",
+        "JAP": "女",
+        "FR": "femme",
+        "BG": "жена",
+        "VI": "người phụ nữ"
+    },
+    {
+        "EN": "world",
+        "JAP": "世",
+        "FR": "monde",
+        "BG": "свят",
+        "VI": "thế giới"
+    },
+    {
+        "EN": "writing",
+        "JAP": "文",
+        "FR": "écriture",
+        "BG": "писане",
+        "VI": "viết"
+    },
+    {
+        "EN": "year",
+        "JAP": "年",
+        "FR": "an",
+        "BG": "година",
+        "VI": "năm"
+    }
 ]
