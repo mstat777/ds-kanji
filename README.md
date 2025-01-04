@@ -32,10 +32,10 @@ An application for learning Japanese kanjis, developped as a game.
 
 ## Usage 
 
-<img src="https://kanji.mitkostatev.com/other/home-mobile" width="180"/> &nbsp;
-<img src="https://kanji.mitkostatev.com/other/level-mobile" width="180"/> &nbsp;
-<img src="https://kanji.mitkostatev.com/other/game-mobile" width="180"/>
-<img src="https://kanji.mitkostatev.com/other/gameover-mobile" width="180"/>
+<img src="https://kanji.mitkostatev.com/other/home-mobile.png" width="180"/> &nbsp;
+<img src="https://kanji.mitkostatev.com/other/level-mobile.png" width="180"/> &nbsp;
+<img src="https://kanji.mitkostatev.com/other/game-mobile.png" width="180"/> &nbsp;
+<img src="https://kanji.mitkostatev.com/other/gameover-mobile.png" width="180"/>
 
 ## Contact
 
