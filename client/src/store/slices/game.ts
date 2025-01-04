@@ -3,6 +3,8 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit/react";
 type gameType = {
    db: any[];
    isGameOver: boolean;
+   kanjiToMeaning: boolean;
+   meaningToKanji: boolean;
    level: number;
    round: number;
    totalRounds: number;
@@ -15,6 +17,8 @@ type gameType = {
 const initialState: gameType = {
    db: [],
    isGameOver: false,
+   kanjiToMeaning: false,
+   meaningToKanji: false,
    level: 0,
    round: 0,
    totalRounds: 20,
@@ -34,6 +38,12 @@ export const gameSlice = createSlice({
       setIsGameOver: (state, action: PayloadAction<boolean>) => {
          state.isGameOver = action.payload;
       },
+      setKanjiToMeaning: (state, action: PayloadAction<boolean>) => {
+         state.kanjiToMeaning = action.payload;
+      },
+      setMeaningToKanji: (state, action: PayloadAction<boolean>) => {
+         state.meaningToKanji = action.payload;
+      },
       setLevel: (state, action: PayloadAction<number>) => {
          state.level = action.payload;
       },
@@ -42,14 +52,10 @@ export const gameSlice = createSlice({
       },
       setCorrect: (state, action: PayloadAction<number>) => {
          state.correct = action.payload;
-         //console.log(state.correct + 1);
-         //console.log(state.round + 1);
          state.score = Math.floor((state.correct / (state.round + 1)) * 100);
       },
       setWrong: (state, action: PayloadAction<number>) => {
          state.wrong = action.payload;
-         //console.log(state.correct + 1);
-         //console.log(state.round + 1);
          state.score = Math.floor((state.correct / (state.round + 1)) * 100);
       },
       setQuestionNbs: (state, action: PayloadAction<number[]>) => {
@@ -61,6 +67,8 @@ export const gameSlice = createSlice({
 export const {
    setDb,
    setIsGameOver,
+   setKanjiToMeaning,
+   setMeaningToKanji,
    setLevel,
    setRound,
    setCorrect,

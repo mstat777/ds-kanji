@@ -6,7 +6,7 @@ export default function InfoBar() {
    const { t } = useTranslation();
    const trPath = "components.infoBar"; // translation path
 
-   const { level, round, score, correct, wrong } = useAppSelector((state) => state.game);
+   const { level, round, totalRounds, score, correct, wrong } = useAppSelector((state) => state.game);
 
    return (
       <div className="infobar">
@@ -19,7 +19,7 @@ export default function InfoBar() {
 
             <div className="info_item">
                <span>{t(`${trPath}.round`)}</span>
-               <span>{round + 1}/20</span>
+               <span>{round + 1}/{totalRounds}</span>
             </div>
          </div>
 

@@ -9,8 +9,7 @@ const appReducer = combineReducers({
 
 const rootReducer = (state: any, action: PayloadAction) => {
    if (action.type === 'RESET_GAME') {
-      //console.log("RESET_PGN called!");
-      // exclude 'game' & 'chessSet' from being reset
+      // exclude 'settings' slice from being reset
       const { settings } = state;
       state = { settings };
       //console.log(state);

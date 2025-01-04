@@ -3,8 +3,7 @@ import { useContext, useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../../store/hooks';
 import { useTranslation } from 'react-i18next';
-import { setKanjiToMeaning, setMeaningToKanji } from '../../store/slices/settings';
-import { setDb, setLevel, setRound, setCorrect, setWrong, setQuestionNbs } from '../../store/slices/game';
+import { setDb, setKanjiToMeaning, setMeaningToKanji, setLevel, setRound, setCorrect, setWrong, setQuestionNbs } from '../../store/slices/game';
 import InfoBar from '../../components/InfoBar/Index';
 import Card from '../../components/Card/Index';
 import MainBtn from '../../components/buttons/MainBtn/Index';
@@ -18,8 +17,8 @@ export default function Home() {
 
    const navigate = useNavigate();
    const dispatch = useAppDispatch();
-   const { kanjiToMeaning, meaningToKanji, showInfoBar } = useAppSelector((state) => state.settings);
-   const { db, level, round, correct, wrong, totalRounds, questionNbs } = useAppSelector((state) => state.game);
+   const { showInfoBar } = useAppSelector((state) => state.settings);
+   const { db, kanjiToMeaning, meaningToKanji, level, round, correct, wrong, totalRounds, questionNbs } = useAppSelector((state) => state.game);
 
    const [choices, setChoices] = useState<number[]>([]);
    const [selected, setSelected] = useState<number | undefined>(undefined);
@@ -28,7 +27,11 @@ export default function Home() {
    const timerRoundRef = useRef<number | null>(null);
    const timerShowAnswerRef = useRef<number | null>(null);
 
+   // load the DB according to the selected level
    useEffect(() => {
+      //console.log(kanjiToMeaning);
+      //console.log(meaningToKanji);
+      //console.log(level);
       const importData = async (level: number) => {
          let fileName = '';
          switch (level) {
@@ -47,19 +50,23 @@ export default function Home() {
       }
    }, [level]);
 
-   // get random questions data
+   // get all questions data in a random order
    useEffect(() => {
       //console.log("db.length = ", db.length);
-      if (totalRounds && db.length) {
+      if (db.length) {
+         //console.log(db);
          const numbers = [...Array(db.length).keys()];
          const randomNbs = numbers.sort(() => Math.random() - 0.5).slice(0, totalRounds);
          dispatch(setQuestionNbs(randomNbs));
       }
-   }, [totalRounds, db.length]);
+   }, [db.length]);
 
-   // create choices
+   // create answers(choices) for the current question
    useEffect(() => {
-      if (questionNbs.length) {
+      //console.log(kanjiToMeaning, meaningToKanji, level, round, correct, wrong, totalRounds);
+      //console.log(db);
+      //console.log(questionNbs);
+      if (questionNbs.length && round <= totalRounds - 1) {
          initializeRound();
          const numbers = [...Array(db.length).keys()];
          const randomNbs = numbers.sort(() => Math.random() - 0.5);
@@ -99,12 +106,12 @@ export default function Home() {
       timerRoundRef.current = setTimeout(() => {
          if (round === totalRounds - 1) {
             navigate('/gameover');
-            dispatch(setKanjiToMeaning(false));
-            dispatch(setMeaningToKanji(false));
+         } else {
+            dispatch(setRound(round + 1));
          }
 
-         dispatch(setRound(round < totalRounds - 1 ? round + 1 : 0));
-         //console.log("round = ", round);
+         //dispatch(setRound(round < totalRounds - 1 ? round + 1 : 0));
+         console.log("round = ", round);
       }, 2200);
    }
 
@@ -116,121 +123,124 @@ export default function Home() {
    }
 
    return (
-      <main className="home">
+      lang ?
+         <main className="home">
 
-         {(!kanjiToMeaning && !meaningToKanji) &&
-            <section className="choose_mode">
-               <MainBtn
-                  text={t(`${trPath}.mode.findMeaning`)}
-                  onClick={() => dispatch(setKanjiToMeaning(true))}
-               />
-               <MainBtn
-                  text={t(`${trPath}.mode.findKanji`)}
-                  onClick={() => dispatch(setMeaningToKanji(true))}
-               />
-            </section>
-         }
+            {(!kanjiToMeaning && !meaningToKanji) &&
+               <section className="choose_mode">
+                  <MainBtn
+                     text={t(`${trPath}.mode.findMeaning`)}
+                     onClick={() => dispatch(setKanjiToMeaning(true))}
+                  />
+                  <MainBtn
+                     text={t(`${trPath}.mode.findKanji`)}
+                     onClick={() => dispatch(setMeaningToKanji(true))}
+                  />
+               </section>
+            }
 
-         {((kanjiToMeaning || meaningToKanji)
-            && !level) &&
-            <section className="choose_mode">
-               <p className="level_txt">{t(`${trPath}.level.text`)}</p>
+            {((kanjiToMeaning || meaningToKanji)
+               && !level) &&
+               <section className="choose_mode">
+                  <p className="level_txt">{t(`${trPath}.level.text`)}</p>
 
-               <MainBtn
-                  text={t(`${trPath}.level.1`)}
-                  onClick={() => dispatch(setLevel(1))}
-               />
-               <MainBtn
-                  text={t(`${trPath}.level.2`)}
-                  onClick={() => dispatch(setLevel(2))}
-               />
-               <MainBtn
-                  text={t(`${trPath}.level.3`)}
-                  onClick={() => dispatch(setLevel(3))}
-               />
-               <MainBtn
-                  text={t(`${trPath}.level.4`)}
-                  onClick={() => dispatch(setLevel(4))}
-               />
-            </section>
-         }
+                  <MainBtn
+                     text={t(`${trPath}.level.1`)}
+                     onClick={() => dispatch(setLevel(1))}
+                  />
+                  <MainBtn
+                     text={t(`${trPath}.level.2`)}
+                     onClick={() => dispatch(setLevel(2))}
+                  />
+                  <MainBtn
+                     text={t(`${trPath}.level.3`)}
+                     onClick={() => dispatch(setLevel(3))}
+                  />
+                  <MainBtn
+                     text={t(`${trPath}.level.4`)}
+                     onClick={() => dispatch(setLevel(4))}
+                  />
+               </section>
+            }
 
-         {/* ----- Game Mode "KANJI TO MEANING" ----- */}
-         {(kanjiToMeaning
-            && lang
-            && level
-            && choices.length
-            && round < totalRounds) &&
+            {/* ----- Game Mode "KANJI TO MEANING" ----- */}
+            {(kanjiToMeaning
+               && level
 
-            <section
-               className="kanji_to_meaning_section"
-               key={round}
-            >
-               {showInfoBar && <InfoBar />}
-               <section className="card_section">
-                  <div className="question_ctn">
-                     <p>{db[questionNbs[round]].JAP}</p>
-                  </div>
+               && db.length
+               && choices.length
+               && round < totalRounds) &&
 
-                  <div className="choices_ctn">
-                     {choices.map((choice, i) =>
-                        <Card
-                           type="letters"
-                           className={`
+               <section
+                  className="kanji_to_meaning_section"
+                  key={round}
+               >
+                  {showInfoBar && <InfoBar />}
+                  <section className="card_section">
+                     <div className="question_ctn">
+                        <p>{db[questionNbs[round]].JAP}</p>
+                     </div>
+
+                     <div className="choices_ctn">
+                        {choices.map((choice, i) =>
+                           <Card
+                              type="letters"
+                              className={`
                               ${(selected === choice && !answer) ? 'selected' : ''} 
                               ${selected === choice ? answer : ''}
                               ${answer === 'wrong' && choice === questionNbs[round] ? 'correct_blinking' : ''}
                            `}
-                           text={db[choice][lang]}
-                           onClick={() => handleCardClick(choice)}
-                           key={i}
-                        />
-                     )}
-                  </div>
+                              text={db[choice][lang]}
+                              onClick={() => handleCardClick(choice)}
+                              key={i}
+                           />
+                        )}
+                     </div>
+                  </section>
+
                </section>
+            }
 
-            </section>
-         }
+            {/* ----- Game Mode "MEANING TO KANJI" ----- */}
+            {(meaningToKanji
+               && level
 
-         {/* ----- Game Mode "MEANING TO KANJI" ----- */}
-         {(meaningToKanji
-            && lang
-            && level
-            && choices.length
-            && round < totalRounds) &&
+               && db.length
+               && choices.length
+               && round < totalRounds) &&
 
-            <section
-               className="meaning_to_kanji_section"
-               key={round}
-            >
+               <section
+                  className="meaning_to_kanji_section"
+                  key={round}
+               >
+                  {showInfoBar && <InfoBar />}
 
-               {showInfoBar && <InfoBar />}
+                  <section className="card_section">
+                     <div className="question_ctn">
+                        <p>{db[questionNbs[round]][lang]}</p>
+                     </div>
 
-               <section className="card_section">
-                  <div className="question_ctn">
-                     <p>{db[questionNbs[round]][lang]}</p>
-                  </div>
-
-                  <div className="choices_ctn">
-                     {choices.map((choice, i) =>
-                        <Card
-                           type="kanji"
-                           className={`
+                     <div className="choices_ctn">
+                        {choices.map((choice, i) =>
+                           <Card
+                              type="kanji"
+                              className={`
                               ${(selected === choice && !answer) ? 'selected' : ''} 
                               ${selected === choice ? answer : ''}
                               ${answer === 'wrong' && choice === questionNbs[round] ? 'correct_blinking' : ''}
                            `}
-                           text={db[choice].JAP}
-                           onClick={() => handleCardClick(choice)}
-                           key={i}
-                        />
-                     )}
-                  </div>
+                              text={db[choice].JAP}
+                              onClick={() => handleCardClick(choice)}
+                              key={i}
+                           />
+                        )}
+                     </div>
+                  </section>
+
                </section>
+            }
 
-            </section>
-         }
-
-      </main>
+         </main>
+         : <p>Error: Language are missing (Home:246)</p>
    );
 }
