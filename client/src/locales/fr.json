@@ -1,14 +1,14 @@
 {
    "lang": {
-      "english": "anglais",
-      "french": "français",
-      "bulgarian": "bulgare",
-      "vietnamese": "vietnamien"
+      "en": "anglais",
+      "fr": "français",
+      "bg": "bulgare",
+      "vi": "vietnamien"
    },
    "components": {
       "header": {
          "homeLink": "accueil",
-         "settingsLink": "réglages",
+         "settingsLink": "paramètres",
          "aboutLink": "à propos"
       },
       "footer": {
@@ -65,7 +65,7 @@
          }
       },
       "settings": {
-         "title": "Réglages",
+         "title": "Paramètres",
          "showInfoBar": "Afficher la barre d'info"
       },
       "notFound": {

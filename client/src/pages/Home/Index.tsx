@@ -25,13 +25,9 @@ export default function Home() {
    const [answer, setAnswer] = useState<string>('');
 
    const timerRoundRef = useRef<number | null>(null);
-   const timerShowAnswerRef = useRef<number | null>(null);
 
    // load the DB according to the selected level
    useEffect(() => {
-      //console.log(kanjiToMeaning);
-      //console.log(meaningToKanji);
-      //console.log(level);
       const importData = async (level: number) => {
          let fileName = '';
          switch (level) {
@@ -52,9 +48,7 @@ export default function Home() {
 
    // get all questions data in a random order
    useEffect(() => {
-      //console.log("db.length = ", db.length);
       if (db.length) {
-         //console.log(db);
          const numbers = [...Array(db.length).keys()];
          const randomNbs = numbers.sort(() => Math.random() - 0.5).slice(0, totalRounds);
          dispatch(setQuestionNbs(randomNbs));
@@ -63,9 +57,6 @@ export default function Home() {
 
    // create answers(choices) for the current question
    useEffect(() => {
-      //console.log(kanjiToMeaning, meaningToKanji, level, round, correct, wrong, totalRounds);
-      //console.log(db);
-      //console.log(questionNbs);
       if (questionNbs.length && round <= totalRounds - 1) {
          initializeRound();
          const numbers = [...Array(db.length).keys()];
@@ -89,18 +80,14 @@ export default function Home() {
    const checkAnswer = (choice: number) => {
       timerRoundRef.current &&
          clearTimeout(timerRoundRef.current);
-      timerShowAnswerRef.current &&
-         clearTimeout(timerShowAnswerRef.current);
 
-      timerShowAnswerRef.current = setTimeout(() => {
-         if (choice === questionNbs[round]) {
-            setAnswer("correct");
-            dispatch(setCorrect(correct + 1));
-         } else {
-            setAnswer("wrong");
-            dispatch(setWrong(wrong + 1));
-         }
-      }, 400);
+      if (choice === questionNbs[round]) {
+         setAnswer("correct");
+         dispatch(setCorrect(correct + 1));
+      } else {
+         setAnswer("wrong");
+         dispatch(setWrong(wrong + 1));
+      }
 
       // change round after some time
       timerRoundRef.current = setTimeout(() => {
@@ -109,10 +96,7 @@ export default function Home() {
          } else {
             dispatch(setRound(round + 1));
          }
-
-         //dispatch(setRound(round < totalRounds - 1 ? round + 1 : 0));
-         console.log("round = ", round);
-      }, 2200);
+      }, 1200);
    }
 
    const handleCardClick = (choice: number) => {
@@ -166,7 +150,6 @@ export default function Home() {
             {/* ----- Game Mode "KANJI TO MEANING" ----- */}
             {(kanjiToMeaning
                && level
-
                && db.length
                && choices.length
                && round < totalRounds) &&
@@ -204,7 +187,6 @@ export default function Home() {
             {/* ----- Game Mode "MEANING TO KANJI" ----- */}
             {(meaningToKanji
                && level
-
                && db.length
                && choices.length
                && round < totalRounds) &&

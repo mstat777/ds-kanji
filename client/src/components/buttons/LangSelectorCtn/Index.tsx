@@ -1,9 +1,11 @@
 import './LangSelectorCtn.scss';
 import { useState, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import { languages, changeLanguage } from '../../../i18n';
 import { DataLayerContext } from '../../../context/DataLayerProvider';
 
 export default function LangSelectorCtn() {
+   const { t } = useTranslation();
    const DATA_LAYER = useContext(DataLayerContext);
    const [showLangMenu, setShowLangMenu] = useState<boolean>(false);
 
@@ -36,14 +38,17 @@ export default function LangSelectorCtn() {
 
          <div className="lang_menu">
             {languages &&
-               languages.map((lang, i) =>
-                  <button
-                     onClick={() => changeLangAndHideMenu(lang)}
-                     key={i}
-                     className={`lang_btn ${showLangMenu ? "grey_outline" : null}`}>
-                     <img src={DATA_LAYER.images[i].file} alt="language" />
-                  </button>
-               )
+               languages.map((lang, i) => (
+                  <div className="lang_ctn">
+                     <span className="lang_txt">{t(`lang.${lang}`)}</span>
+                     <button
+                        onClick={() => changeLangAndHideMenu(lang)}
+                        key={i}
+                        className={`lang_btn ${showLangMenu ? "grey_outline" : null}`}>
+                        <img src={DATA_LAYER.images[i].file} alt="language" />
+                     </button>
+                  </div>
+               ))
             }
          </div>
       </div>

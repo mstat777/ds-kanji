@@ -2,33 +2,40 @@
 
 .infobar {
    display: flex;
-   flex-direction: column;
+   flex-wrap: wrap;
+   justify-content: space-between;
    width: 100%;
    padding: 4px 20px;
    background-color: $main-color-4;
 
-   .info_row {
+   @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      align-items: center;
+   }
+
+   .info_item {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin: 0 10px;
+      margin: 3px 0;
 
-      &+.info_row {
-         margin-top: 4px;
+      &:first-child {
+         min-width: 60%;
+
+         @media screen and (min-width: $tablet) {
+            min-width: 70%;
+         }
       }
 
-      .info_item {
-         >span {
-            font-size: 1.4rem;
+      >span {
+         font-size: 1.4rem;
 
-            &:last-child {
-               margin-left: 4px;
-               padding: 1px 5px;
-               border-radius: 4px;
-               font-weight: 700;
-               color: $main-color-0;
-               background-color: $main-color-5;
-            }
+         &:last-child {
+            margin-left: 4px;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-weight: 700;
+            color: $main-color-0;
+            background-color: $main-color-5;
          }
       }
    }

@@ -1,9 +1,9 @@
 {
    "lang": {
-      "english": "english",
-      "french": "french",
-      "bulgarian": "bulgarian",
-      "vietnamese": "vietnamese"
+      "en": "english",
+      "fr": "french",
+      "bg": "bulgarian",
+      "vi": "vietnamese"
    },
    "components": {
       "header": {

@@ -85,8 +85,9 @@
          z-index: 101;
 
          @media screen and (min-width: $tablet) {
-            left: unset;
+            right: unset;
             width: 200px;
+            background: $main-color-3;
          }
 
          >li {

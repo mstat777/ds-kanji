@@ -1,9 +1,9 @@
 {
    "lang": {
-      "english": "Tiếng Anh",
-      "french": "Tiếng Pháp",
-      "bulgarian": "Tiếng Bulgaria",
-      "vietnamese": "Tiếng Việt"
+      "en": "Tiếng Anh",
+      "fr": "Tiếng Pháp",
+      "bg": "Tiếng Bulgaria",
+      "vi": "Tiếng Việt"
    },
    "components": {
       "header": {
@@ -33,7 +33,7 @@
             "1": "Rất dễ",
             "2": "Dễ",
             "3": "Trung bình",
-            "4": "Cứng"
+            "4": "Khó"
          }
       },
       "gameOver": {

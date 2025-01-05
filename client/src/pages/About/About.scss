@@ -25,8 +25,8 @@
       border-radius: 6px;
       font-size: 4.6rem;
       font-weight: 400;
-      color: $darkgrey-color-4;
-      text-shadow: 0 0 2px $main-color-0;
+      color: $light-color; // $darkgrey-color-4;
+      text-shadow: 0 0 6px $main-color-0;
       background-color: rgba(198, 232, 255, .8);
 
       @media screen and (min-width: $tablet) {

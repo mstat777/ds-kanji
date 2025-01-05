@@ -10,7 +10,11 @@
    border-radius: 20px;
    box-shadow: 2px 2px 2px $darkgrey-color-3;
    background-color: $main-color-5;
-   transition: background-color .5s;
+   transition: background-color .4s;
+
+   &:hover {
+      background-color: $main-color-3;
+   }
 
    .text {
       margin-bottom: 3rem;
